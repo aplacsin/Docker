@@ -18,5 +18,11 @@ sh-php: ##enter to container
 	$(docker_compose_bin) exec --user=user:1000 php bash
 sh-php-root: ##enter to container
 	$(docker_compose_bin) exec php bash
+sh-mongo: ##enter to container
+	$(docker_compose_bin) exec mongodb bash
+sh-rabbit: ##enter to container
+	$(docker_compose_bin) exec --user=1000:1000 rabbitmq bash
 sh-node: ##enter to container
 	$(docker_compose_bin) run --user=1000:1000 node bash
+sh-mailhog: ##enter to container
+	$(docker_compose_bin) run --user=1000:1000 mail bash
